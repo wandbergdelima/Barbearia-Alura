@@ -1,16 +1,13 @@
+
 body {
 	font-family: 'Montserrat', sans-serif;
 }
 
 header {
+	width: 100%;
 	background: #BBBBBB;
 	padding: 20px 0;
-}
-
-.caixa {
-	position: relative;
-	width: 940px;
-	margin: 0 auto;
+	display: flex;
 }
 
 nav {
@@ -21,7 +18,7 @@ nav {
 
 nav li {
 	display: inline;
-	margin: 0 0 0 15px;
+	margin: 0 0 0 20px;
 }
 
 nav a {
@@ -37,6 +34,119 @@ nav a:hover {
 	text-decoration: underline;
 }
 
+/* css da página inicial */
+
+.caixa {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.banner {
+	width:100%;
+	height: 280px;
+}
+
+.titulo-principal {
+	text-align: center;
+	font-size: 2em;
+	margin: 0 0 1em;
+	clear: left;
+}
+
+.principal {
+	padding: 2em 0;
+	background: #FEFEFE;
+	width: 940px;
+	margin: 0 auto;
+}
+
+.principal p {
+	margin: 0 0 1em;
+}
+
+.principal strong {
+	font-weight: bold;
+}
+
+.principal em {
+	font-style: italic;
+}
+
+.utensilios {
+	width: 120px;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.mapa {
+	padding: 2em 0;
+	background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa-conteudo {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.mapa p {
+	margin: 0 0 2em;
+	text-align: center;
+}
+
+.beneficios {
+	padding: 2em 0;
+	background: #888888;
+}
+
+.conteudo-beneficios {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.itens {
+	line-height: 1.5;
+	margin-bottom: 15px;
+}
+
+.itens:first-child {
+	font-weight: bold;
+}
+
+.itens:last-child {
+	font-weight: bold;
+}
+
+.itens:before {
+	content: "🟊";
+}
+
+.itens:after {
+	content: "🟊";
+}
+
+.imagem-beneficios {
+	width: 60%;
+	opacity: 1;
+	transition: 400ms;
+	box-shadow: 10px 10px 10px 0 #000000;
+}
+
+.imagem-beneficios:hover {
+	opacity: 0.3;
+}
+
+.video {
+	width: 560px;
+	margin: 2em auto;
+}
+
+/* Pagina de PRODUTOS */
 .produtos {
 	width: 940px;
 	margin: 0 auto;
@@ -84,8 +194,9 @@ nav a:hover {
 
 footer {
 	text-align: center;
-	background: url("bg.jpg");
+	background-color: #BBBBBB; 
 	padding: 40px 0;
+
 }
 
 .copyright {
@@ -94,12 +205,11 @@ footer {
 	margin: 20px 0 0;
 }
 
-main {
-	
-}
-
+/* Pagina de CONTATO */
 form {
+	width: 100%;
 	margin: 40px 0;
+	padding: 0 0 0 3em;
 }
 
 form label, form legend {
@@ -134,7 +244,7 @@ form label, form legend {
 
 .enviar:hover {
 	background: darkorange;
-	transform: scale(1.2);
+	transform: scale(1.1);
 }
 
 table {
@@ -152,106 +262,15 @@ td, th {
 	padding: 8px 15px;
 }
 
-
-/* css da página inicial */
-.banner {
-	width:100%;
-}
-
-.titulo-principal {
-	text-align: center;
-	font-size: 2em;
-	margin: 0 0 1em;
-	clear: left;
-}
-
-.principal {
-	padding: 3em 0;
-	background: #FEFEFE;
-	width: 940px;
-	margin: 0 auto;
-}
-
-.principal p {
-	margin: 0 0 1em;
-}
-
-.principal strong {
-	font-weight: bold;
-}
-
-.principal em {
-	font-style: italic;
-}
-
-.utensilios {
-	width: 120px;
-	float: left;
-	margin: 0 20px 20px 0;
-}
-
-.mapa {
-	padding: 3em 0;
-	background: linear-gradient(#FEFEFE, #888888);
-}
-
-.mapa-conteudo {
-	width: 940px;
-	margin: 0 auto;
-}
-
-.mapa p {
-	margin: 0 0 2em;
-	text-align: center;
-}
-
-.beneficios {
-	padding: 3em 0;
-	background: #888888;
-}
-
-.conteudo-beneficios {
-	width: 640px;
-	margin: 0 auto;
-}
-
-.lista-beneficios {
-	width: 40%;
-	display: inline-block;
-	vertical-align: top;
-}
-
-.itens {
-	line-height: 1.5;
-}
-
-.itens:first-child {
-	font-weight: bold;
-}
-
-.itens:before {
-	content: "🟊";
-}
-
-.imagem-beneficios {
-	width: 60%;
-	opacity: 1;
-	transition: 400ms;
-	box-shadow: 10px 10px 10px 0 #000000;
-}
-
-.imagem-beneficios:hover {
-	opacity: 0.3;
-}
-
-.video {
-	width: 560px;
-	margin: 2em auto;
-}
-
-@media screen and (max-width: 480px) {
-	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+@media screen and (max-width: 320px) {
+	.caixa, .principal {
 		width: auto;
+		padding: 0.5em 0;
+	}
+
+	.conteudo-beneficios, .video, .mapa-conteudo{
+		width: 90%;
+		padding: 0.5em 0;
 	}
 
 	h1 {
@@ -262,7 +281,14 @@ td, th {
 		position: static;
 	}
 
+	nav ul {
+		text-align: center;
+	}
+
 	.lista-beneficios, .imagem-beneficios {
 		width: 100%;
+	}
+	.itens {
+		line-height: 1.5;
 	}
 }
